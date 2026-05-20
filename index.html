@@ -1,252 +1,82 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Churrasquin Nordestino - Cardápio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Churrasquin Nordestino</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="https://img.icons8.com/external-becris-lineal-becris/512/external-barbecue-party-and-celebration-becris-lineal-becris.png" alt="Logo Churrasquin" class="logo">
-                <h1 class="restaurant-name">Churrasquin Nordestino</h1>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-fire flame-icon"></i>
+                <h1>Churrasquin Nordestino</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#churrasco">Churrasco</a></li>
+                    <li><a href="#petiscos">Petiscos</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#" onclick="alert('Carrinho em desenvolvimento!')">🛒 Carrinho</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav class="navbar">
-        <ul class="nav-menu">
-            <li><a href="#cafes" class="nav-link">Cafés</a></li>
-            <li><a href="#especial" class="nav-link">Especial da Casa</a></li>
-            <li><a href="#bebidas" class="nav-link">Bebidas</a></li>
-            <li><a href="#doces" class="nav-link">Doces</a></li>
-            <li><a href="#salgados" class="nav-link">Salgados</a></li>
-        </ul>
-    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao</h2>
+            <h1>CHURRASQUIN NORDESTINO</h1>
+            <p>O melhor churrasco do Nordeste com sabor de casa</p>
+            <a href="#menu" class="btn">Ver Cardápio</a>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- Cafés Section -->
-        <section id="cafes" class="category-section">
-            <h2 class="category-title">☕ Cafés</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=300&fit=crop" alt="Café Expresso" class="product-image">
-                    <h3 class="product-name">Café Expresso</h3>
-                    <p class="product-description">Café expresso forte e aromático, preparado na hora</p>
-                    <p class="product-price">R$ 4,50</p>
-                </div>
+    <!-- MENU -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nosso Cardápio</h2>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1545665225-4b8bdc7c6e5c?w=400&h=300&fit=crop" alt="Café com Leite" class="product-image">
-                    <h3 class="product-name">Café com Leite</h3>
-                    <p class="product-description">Café quentinho com leite integral cremoso</p>
-                    <p class="product-price">R$ 5,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?w=400&h=300&fit=crop" alt="Cappuccino" class="product-image">
-                    <h3 class="product-name">Cappuccino</h3>
-                    <p class="product-description">Espresso com leite vaporizado e chocolate em pó</p>
-                    <p class="product-price">R$ 6,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1559421293-8491ef103efb?w=400&h=300&fit=crop" alt="Café Gelado" class="product-image">
-                    <h3 class="product-name">Café Gelado</h3>
-                    <p class="product-description">Café refrescante servido com gelo e leite condensado</p>
-                    <p class="product-price">R$ 5,50</p>
-                </div>
+            <!-- CHURRASCO -->
+            <div id="churrasco" class="category">
+                <h3><i class="fas fa-drumstick-bite"></i> Churrasco</h3>
+                <div class="menu-grid" id="grid-churrasco"></div>
             </div>
-        </section>
 
-        <!-- Especial da Casa Section -->
-        <section id="especial" class="category-section">
-            <h2 class="category-title">🔥 Especial da Casa</h2>
-            <div class="products-grid">
-                <div class="product-card featured">
-                    <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&h=300&fit=crop" alt="Picanha na Brasa" class="product-image">
-                    <h3 class="product-name">Picanha na Brasa</h3>
-                    <p class="product-description">Suculenta picanha grelhada na brasa, ponto no ponto</p>
-                    <p class="product-price">R$ 89,90</p>
-                </div>
-
-                <div class="product-card featured">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561d1f?w=400&h=300&fit=crop" alt="Churrasco Misto" class="product-image">
-                    <h3 class="product-name">Churrasco Misto</h3>
-                    <p class="product-description">Seleção de carnes nobres e frango grelhados</p>
-                    <p class="product-price">R$ 105,90</p>
-                </div>
-
-                <div class="product-card featured">
-                    <img src="https://images.unsplash.com/photo-1529193591184-fead5f4d4e16?w=400&h=300&fit=crop" alt="Costela Fumegante" class="product-image">
-                    <h3 class="product-name">Costela Fumegante</h3>
-                    <p class="product-description">Costela maturada defumada com molho da casa</p>
-                    <p class="product-price">R$ 95,90</p>
-                </div>
-
-                <div class="product-card featured">
-                    <img src="https://images.unsplash.com/photo-1525183549695-b5dcefba1d9a?w=400&h=300&fit=crop" alt="Cupim Grelhado" class="product-image">
-                    <h3 class="product-name">Cupim Grelhado</h3>
-                    <p class="product-description">Cupim macio e suculento, grelhado na brasa ardente</p>
-                    <p class="product-price">R$ 79,90</p>
-                </div>
+            <!-- PETISCOS -->
+            <div id="petiscos" class="category">
+                <h3><i class="fas fa-cheese"></i> Petiscos</h3>
+                <div class="menu-grid" id="grid-petiscos"></div>
             </div>
-        </section>
 
-        <!-- Bebidas Section -->
-        <section id="bebidas" class="category-section">
-            <h2 class="category-title">🍹 Bebidas</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1585518419759-47c5ac19b118?w=400&h=300&fit=crop" alt="Refrigerante" class="product-image">
-                    <h3 class="product-name">Refrigerante</h3>
-                    <p class="product-description">Diversos sabores gelados de refrigerante</p>
-                    <p class="product-price">R$ 4,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1589985643862-5dc369e73319?w=400&h=300&fit=crop" alt="Suco Natural" class="product-image">
-                    <h3 class="product-name">Suco Natural</h3>
-                    <p class="product-description">Suco fresco de frutas nordestinas</p>
-                    <p class="product-price">R$ 6,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1608500846851-3184fb0f1a8e?w=400&h=300&fit=crop" alt="Cerveja Gelada" class="product-image">
-                    <h3 class="product-name">Cerveja Gelada</h3>
-                    <p class="product-description">Cerveja artesanal geladinha para acompanhar o churrasco</p>
-                    <p class="product-price">R$ 7,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1584743246035-97337cde8b64?w=400&h=300&fit=crop" alt="Água de Coco" class="product-image">
-                    <h3 class="product-name">Água de Coco</h3>
-                    <p class="product-description">Água de coco fresca direto do nordeste</p>
-                    <p class="product-price">R$ 5,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Vinho Tinto" class="product-image">
-                    <h3 class="product-name">Vinho Tinto</h3>
-                    <p class="product-description">Seleção de vinhos tintos premium</p>
-                    <p class="product-price">R$ 35,00</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Doces Section -->
-        <section id="doces" class="category-section">
-            <h2 class="category-title">🍰 Doces</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Brownie de Chocolate" class="product-image">
-                    <h3 class="product-name">Brownie de Chocolate</h3>
-                    <p class="product-description">Brownies fudge cremoso e chocolatudo</p>
-                    <p class="product-price">R$ 8,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Pavê de Chocolate" class="product-image">
-                    <h3 class="product-name">Pavê de Chocolate</h3>
-                    <p class="product-description">Pavê tradicional com camadas de chocolate</p>
-                    <p class="product-price">R$ 9,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1587080276128-6a42a7b5a301?w=400&h=300&fit=crop" alt="Pudim de Leite" class="product-image">
-                    <h3 class="product-name">Pudim de Leite</h3>
-                    <p class="product-description">Pudim cremoso com calda de caramelo</p>
-                    <p class="product-price">R$ 7,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop" alt="Sorveteria" class="product-image">
-                    <h3 class="product-name">Sorvete Gourmet</h3>
-                    <p class="product-description">Sorvete artesanal em diversos sabores</p>
-                    <p class="product-price">R$ 8,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Mousse de Maracujá" class="product-image">
-                    <h3 class="product-name">Mousse de Maracujá</h3>
-                    <p class="product-description">Mousse leve e refrescante de maracujá</p>
-                    <p class="product-price">R$ 6,50</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Salgados Section -->
-        <section id="salgados" class="category-section">
-            <h2 class="category-title">🥓 Salgados</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1562547256-f8c6de1c1d8e?w=400&h=300&fit=crop" alt="Batata Frita" class="product-image">
-                    <h3 class="product-name">Batata Frita Crocante</h3>
-                    <p class="product-description">Batata frita crocante e sequinha, acompanhamento perfeito</p>
-                    <p class="product-price">R$ 5,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1599022868076-82342e65a3ba?w=400&h=300&fit=crop" alt="Pão de Queijo" class="product-image">
-                    <h3 class="product-name">Pão de Queijo</h3>
-                    <p class="product-description">Pão de queijo quentinho saído do forno</p>
-                    <p class="product-price">R$ 4,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1609734439577-f1cd4e7e5b56?w=400&h=300&fit=crop" alt="Mandioca Frita" class="product-image">
-                    <h3 class="product-name">Mandioca Frita</h3>
-                    <p class="product-description">Mandioca nordestina crocante e saborosa</p>
-                    <p class="product-price">R$ 4,00</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1612526881563-430f63602796?w=400&h=300&fit=crop" alt="Aipim Frito" class="product-image">
-                    <h3 class="product-name">Aipim Frito</h3>
-                    <p class="product-description">Aipim crocante, acompanhamento tradicional do nordeste</p>
-                    <p class="product-price">R$ 4,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&h=300&fit=crop" alt="Pastel Frito" class="product-image">
-                    <h3 class="product-name">Pastel Frito</h3>
-                    <p class="product-description">Pastel crocante de carne ou queijo</p>
-                    <p class="product-price">R$ 3,50</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1586190936829-cac772800969?w=400&h=300&fit=crop" alt="Bolinhas de Carne" class="product-image">
-                    <h3 class="product-name">Bolinhas de Carne</h3>
-                    <p class="product-description">Bolinhas salgadas crocantes com carne moída</p>
-                    <p class="product-price">R$ 5,50</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Churrasquin Nordestino e CIA</h3>
-                <p>📞 Telefone: (81) 99999-9999</p>
-                <p>Especialidade em Churrasco e Comida Nordestina</p>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-section">
-                <h3>Desenvolvedor</h3>
-                <p>Ellen Eloize e CIA</p>
-                <p>📞 Telefone: (83) 99607-9080</p>
+            <!-- BEBIDAS -->
+            <div id="bebidas" class="category">
+                <h3><i class="fas fa-wine-glass"></i> Bebidas</h3>
+                <div class="menu-grid" id="grid-bebidas"></div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Churrasquin Nordestino. Todos os direitos reservados.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Churrasquin Nordestino & CIA</h4>
+                <p>Rua do Churrasco, 123 - Recife, PE</p>
+                <p><i class="fas fa-phone"></i> (81) 99999-9999</p>
+            </div>
+            <div class="footer-col">
+                <h4>Desenvolvido por</h4>
+                <p>Ellen Eloize & CIA</p>
+                <p><i class="fas fa-phone"></i> (83) 99607-9080</p>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2026 Churrasquin Nordestino. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
