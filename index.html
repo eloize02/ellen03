@@ -1,82 +1,134 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Churrasquin Nordestino</title>
+    <title>Meu Doce Café - Cardápio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
+
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-fire flame-icon"></i>
-                <h1>Churrasquin Nordestino</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#churrasco">Churrasco</a></li>
-                    <li><a href="#petiscos">Petiscos</a></li>
-                    <li><a href="#bebidas">Bebidas</a></li>
-                    <li><a href="#" onclick="alert('Carrinho em desenvolvimento!')">🛒 Carrinho</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100&auto=format&fit=crop&q=60" alt="Logo Meu Doce Café" class="logo">
+            <h1>Meu Doce Café</h1>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Bem-vindo ao</h2>
-            <h1>CHURRASQUIN NORDESTINO</h1>
-            <p>O melhor churrasco do Nordeste com sabor de casa</p>
-            <a href="#menu" class="btn">Ver Cardápio</a>
-        </div>
-    </section>
+    <nav class="menu-categorias">
+        <ul>
+            <li><a href="#cafes">Cafés</a></li>
+            <li><a href="#especial">Especial da Casa</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+            <li><a href="#doces">Doces</a></li>
+            <li><a href="#salgados">Salgados</a></li>
+        </ul>
+    </nav>
 
-    <!-- MENU -->
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h2 class="section-title">Nosso Cardápio</h2>
+    <main class="cardapio-container">
 
-            <!-- CHURRASCO -->
-            <div id="churrasco" class="category">
-                <h3><i class="fas fa-drumstick-bite"></i> Churrasco</h3>
-                <div class="menu-grid" id="grid-churrasco"></div>
+        <section id="cafes" class="categoria-section">
+            <h2>Cafés</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=60" alt="Espresso">
+                    <h3>Espresso Tradicional</h3>
+                    <p class="descricao">Café espresso extraído na hora com grãos selecionados 100% Arábica.</p>
+                    <span class="preco">R$ 6,50</span>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fc9f?w=500&auto=format&fit=crop&q=60" alt="Cappuccino">
+                    <h3>Cappuccino Italiano</h3>
+                    <p class="descricao">Espresso, leite vaporizado e uma crema densa com toque de cacau.</p>
+                    <span class="preco">R$ 11,90</span>
+                </div>
             </div>
+        </section>
 
-            <!-- PETISCOS -->
-            <div id="petiscos" class="category">
-                <h3><i class="fas fa-cheese"></i> Petiscos</h3>
-                <div class="menu-grid" id="grid-petiscos"></div>
+        <section id="especial" class="categoria-section">
+            <h2>Especial da Casa</h2>
+            <div class="produtos-grid">
+                <div class="produto-card destaque">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60" alt="Café Premium">
+                    <h3>Doce Latte Supremo</h3>
+                    <p class="descricao">Nosso espresso especial blend da casa, leite condensado artesanal, chantilly e raspas de chocolate belga.</p>
+                    <span class="preco">R$ 18,50</span>
+                </div>
             </div>
+        </section>
 
-            <!-- BEBIDAS -->
-            <div id="bebidas" class="category">
-                <h3><i class="fas fa-wine-glass"></i> Bebidas</h3>
-                <div class="menu-grid" id="grid-bebidas"></div>
+        <section id="bebidas" class="categoria-section">
+            <h2>Bebidas</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=60" alt="Soda Italiana">
+                    <h3>Soda Italiana de Maçã Verde</h3>
+                    <p class="descricao">Bebida refrescante frisante com xarope artesanal de maçã verde e gelo.</p>
+                    <span class="preco">R$ 12,00</span>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=60" alt="Chocolate Quente">
+                    <h3>Chocolate Quente Cremoso</h3>
+                    <p class="descricao">Chocolate europeu derretido com creme de leite, servido bem denso.</p>
+                    <span class="preco">R$ 14,00</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
+        <section id="doces" class="categoria-section">
+            <h2>Doces</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=60" alt="Bolo de Chocolate">
+                    <h3>Fatia de Bolo Trufado</h3>
+                    <p class="descricao">Bolo de chocolate belga com recheio de ganache meio amargo e cobertura cremosa.</p>
+                    <span class="preco">R$ 15,90</span>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&auto=format&fit=crop&q=60" alt="Donut">
+                    <h3>Donut Glaciado</h3>
+                    <p class="descricao">Rosquinha super macia com cobertura clássica de açúcar e baunilha.</p>
+                    <span class="preco">R$ 9,50</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="salgados" class="categoria-section">
+            <h2>Salgados</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop&q=60" alt="Croissant">
+                    <h3>Croissant de Queijo e Presunto</h3>
+                    <p class="descricao">Massa folhada francesa super crocante e amanteigada, recheada na hora.</p>
+                    <span class="preco">R$ 13,50</span>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=500&auto=format&fit=crop&q=60" alt="Pão de Queijo">
+                    <h3>Combo Pão de Queijo (3 un.)</h3>
+                    <p class="descricao">Pães de queijo mineiro legítimo, crocantes por fora e macios por dentro.</p>
+                    <span class="preco">R$ 8,00</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h4>Churrasquin Nordestino & CIA</h4>
-                <p>Rua do Churrasco, 123 - Recife, PE</p>
-                <p><i class="fas fa-phone"></i> (81) 99999-9999</p>
+        <div class="footer-content">
+            <div class="empresa-dados">
+                <h3>Doce Café CIA</h3>
+                <p>📞 Telefone: (81) 99999-9999</p>
+                <p>📍 O melhor café da cidade</p>
             </div>
-            <div class="footer-col">
-                <h4>Desenvolvido por</h4>
-                <p>Ellen Eloize & CIA</p>
-                <p><i class="fas fa-phone"></i> (83) 99607-9080</p>
+            <div class="dev-dados">
+                <h3>Desenvolvido por</h3>
+                <p>⚡ Lucas Devs e CIA</p>
+                <p>📞 Contato: (83) 99607-9080</p>
             </div>
-            <div class="footer-col">
-                <p>&copy; 2026 Churrasquin Nordestino. Todos os direitos reservados.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Meu Doce Café. Todos os direitos reservados.</p>
         </div>
     </footer>
 
