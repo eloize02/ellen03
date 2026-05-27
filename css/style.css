@@ -1,4 +1,4 @@
-/* RESET DE ESTILOS */
+/* --- RESET E ESTILOS GERAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,212 +7,226 @@
 }
 
 :root {
-    --cor-principal: #4a2c11; /* Marrom Café Escuro */
-    --cor-secundaria: #7c5234; /* Marrom Médio */
-    --cor-fundo: #fdfbf7; /* Off-White / Creme */
-    --cor-detalhe: #d4a373; /* Dourado / Caramelo */
-    --cor-texto: #332211; /* Quase preto caloroso */
-    --cor-card-fundo: #ffffff;
+    --cor-fundo: #121212;         /* Preto fosco para o fundo */
+    --cor-card-bg: #1A1A1A;      /* Cinza escuro para destacar os cards */
+    --cor-primaria: #A82323;     /* Vermelho Pizzaria Principal */
+    --cor-primaria-hover: #D63030;/* Vermelho mais claro para hovers */
+    --cor-texto: #F5F5F5;        /* Branco suave para textos principais */
+    --cor-texto-mutado: #B3B3B3; /* Cinza claro para descrições */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    background-color: var(--cor-principal);
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 4px solid var(--cor-detalhe);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.logo-container {
+/* --- TOPO / HEADER --- */
+header {
+    background-color: #000000;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding: 25px 20px 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-.logo {
+header .logo {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--cor-detalhe);
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 0 10px rgba(168, 35, 35, 0.5);
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    font-family: 'Cinzel', serif;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(168, 35, 35, 0.6);
 }
 
-/* MENU DE NAVEGAÇÃO */
-.menu-categorias {
-    background-color: var(--cor-secundaria);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.menu-categorias ul {
+/* --- NAV / CATEGORIAS --- */
+nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    gap: 20px;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 
-.menu-categorias a {
-    display: block;
-    color: #ffffff;
+nav ul li a {
+    color: var(--cor-texto-mutado);
     text-decoration: none;
-    padding: 15px 25px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
     transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.menu-categorias a:hover {
-    background-color: var(--cor-principal);
-    color: var(--cor-detalhe);
+nav ul li a:hover, nav ul li a.active {
+    color: #FFFFFF;
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria-hover);
 }
 
-/* CORPO DO CARDÁPIO */
-.cardapio-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* --- SEÇÕES E GRID --- */
+.menu-section {
+    padding-top: 100px; /* Margem para compensar o header fixo ao rolar */
+    margin-bottom: 20px;
 }
 
-.categoria-section {
-    margin-bottom: 60px;
-}
-
-.categoria-section h2 {
-    font-family: 'Playfair Display', serif;
+.section-title {
+    font-family: 'Cinzel', serif;
     font-size: 2rem;
-    color: var(--cor-principal);
-    margin-bottom: 25px;
-    border-bottom: 2px solid var(--cor-detalhe);
-    padding-bottom: 5px;
-    display: inline-block;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--cor-primaria);
+    padding-left: 15px;
 }
 
-/* GRID DE PRODUTOS */
-.produtos-grid {
+.grid-cardapio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-/* CARD DO PRODUTO */
-.produto-card {
-    background-color: var(--cor-card-fundo);
+/* --- CARD DO PRODUTO --- */
+.card-item {
+    background-color: var(--cor-card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    border: 1px solid #262626;
 }
 
-.produto-card:hover {
+.card-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(74, 44, 17, 0.15);
+    box-shadow: 0 10px 25px rgba(168, 35, 35, 0.3);
+    border-color: var(--cor-primaria);
 }
 
-.produto-card img {
+.card-item img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.produto-card h3 {
-    font-family: 'Playfair Display', serif;
+.card-item:hover img {
+    transform: scale(1.03);
+}
+
+.card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-body h3 {
     font-size: 1.3rem;
-    padding: 15px 15px 5px 15px;
-    color: var(--cor-principal);
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-.produto-card .descricao {
-    padding: 0 15px 15px 15px;
+.card-body p {
     font-size: 0.9rem;
-    color: #665544;
-    flex-grow: 1; /* Garante que o botão/preço fique alinhado embaixo */
+    color: var(--cor-texto-mutado);
+    margin-bottom: 20px;
 }
 
-.produto-card .preco {
-    display: block;
-    padding: 15px;
-    background-color: #fbf8f3;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: var(--cor-secundaria);
-    border-top: 1px solid #f0e6df;
-    text-align: right;
+.card-body .preco {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--cor-primaria-hover);
+    align-self: flex-start;
 }
 
-/* DESTAQUE ESPECIAL DA CASA */
-.produto-card.destaque {
-    border: 2px solid var(--cor-detalhe);
-    background-color: #fffdf9;
-}
-
-/* RODAPÉ */
+/* --- RODAPÉ --- */
 footer {
-    background-color: var(--cor-principal);
-    color: #f5f5f5;
-    padding: 40px 20px 20px 20px;
+    background-color: #000000;
+    color: var(--cor-texto);
     margin-top: 80px;
-    border-top: 4px solid var(--cor-detalhe);
+    padding: 45px 20px 20px 20px;
+    border-top: 3px solid var(--cor-primaria);
 }
 
-.footer-content {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
+    justify-content: center;
+    text-align: center;
 }
 
-.footer-content h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--cor-detalhe);
-    margin-bottom: 10px;
+.footer-block h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--cor-primaria-hover);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-block .company-name {
     font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
-.footer-content p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    opacity: 0.9;
+.footer-block .phone-link {
+    font-size: 1rem;
+    color: var(--cor-texto-mutado);
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
     padding-top: 20px;
+    border-top: 1px solid #222222;
     font-size: 0.8rem;
-    opacity: 0.7;
+    color: #666666;
 }
 
-/* RESPONSIVIDADE */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    header h1 {
+        font-size: 2rem;
     }
-    
-    .menu-categorias a {
-        padding: 10px 15px;
+    nav ul {
+        gap: 10px;
+    }
+    nav ul li a {
         font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    .section-title {
+        font-size: 1.6rem;
     }
 }

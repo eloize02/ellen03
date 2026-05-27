@@ -1,43 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Efeito de scroll suave refinado ao clicar nas categorias
-    const linksCategorias = document.querySelectorAll('.menu-categorias a');
-    
-    linksCategorias.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            // Compensa a altura do menu fixo (sticky) para não cobrir o título da seção
-            const menuHeight = document.querySelector('.menu-categorias').offsetHeight;
-            const targetPosition = targetSection.offsetTop - menuHeight;
+document.addEventListener('DOMContentLoaded', () => {
+    const secoes = document.querySelectorAll('.menu-section');
+    const linksNav = document.querySelectorAll('nav ul li a');
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        });
-    });
+    // Função para gerenciar o comportamento de scroll dinâmico do menu
+    window.addEventListener('scroll', () => {
+        let secaoAtualId = '';
 
-    // 2. Animação suave (Fade-in) ao rolar a página para ver os produtos
-    const cards = document.querySelectorAll('.produto-card');
-    
-    const fecharAnimacao = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+        secoes.forEach(secao => {
+            const secaoTop = secao.offsetTop;
+            // Define uma margem de detecção adaptada para a altura do menu fixo (sticky header)
+            if (window.pageYOffset >= (secaoTop - 150)) {
+                secaoAtualId = secao.getAttribute('id');
             }
         });
-    }, {
-        threshold: 0.1
-    });
 
-    cards.forEach(card => {
-        // Define o estado inicial da animação via JS para não quebrar caso o JS esteja desativado
-        card.style.opacity = "0";
-        card.style.transform = "translateY(20px)";
-        card.style.transition = "all 0.6s ease-out";
-        fecharAnimacao.observe(card);
+        // Atualiza a classe active para destacar visualmente no menu
+        linksNav.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(secaoAtualId)) {
+                link.classList.add('active');
+            }
+        });
     });
 });

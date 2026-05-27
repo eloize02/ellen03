@@ -3,111 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Doce Café - Cardápio</title>
+    <title>Eloize Pizza´S - Cardápio Digital</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100&auto=format&fit=crop&q=60" alt="Logo Meu Doce Café" class="logo">
-            <h1>Meu Doce Café</h1>
+        <div class="header-container">
+            <img src="https://images.unsplash.com/photo-1613564834361-943694881731?w=150&auto=format&fit=crop&q=80" alt="Logo Eloize Pizza´S" class="logo">
+            <h1>Eloize Pizza´S</h1>
         </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#tradicionais" class="nav-link active">Pizzas Tradicionais</a></li>
+                <li><a href="#especiais" class="nav-link">Pizzas Especiais</a></li>
+                <li><a href="#doces" class="nav-link">Pizzas Doces</a></li>
+                <li><a href="#bebidas" class="nav-link">Bebidas</a></li>
+                <li><a href="#bordas" class="nav-link">Bordas</a></li>
+                <li><a href="#salgados" class="nav-link">Salgados</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="menu-categorias">
-        <ul>
-            <li><a href="#cafes">Cafés</a></li>
-            <li><a href="#especial">Especial da Casa</a></li>
-            <li><a href="#bebidas">Bebidas</a></li>
-            <li><a href="#doces">Doces</a></li>
-            <li><a href="#salgados">Salgados</a></li>
-        </ul>
-    </nav>
+    <main class="container">
 
-    <main class="cardapio-container">
-
-        <section id="cafes" class="categoria-section">
-            <h2>Cafés</h2>
-            <div class="produtos-grid">
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=60" alt="Espresso">
-                    <h3>Espresso Tradicional</h3>
-                    <p class="descricao">Café espresso extraído na hora com grãos selecionados 100% Arábica.</p>
-                    <span class="preco">R$ 6,50</span>
+        <section id="tradicionais" class="menu-section">
+            <h2 class="section-title">Pizzas Tradicionais</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&auto=format&fit=crop&q=80" alt="Pizza Margherita">
+                    <div class="card-body">
+                        <h3>Margherita Clássica</h3>
+                        <p>Molho de tomate artesanal, muçarela premium, rodelas de tomate fresco, manjericão e azeite de oliva.</p>
+                        <span class="preco">R$ 44,90</span>
+                    </div>
                 </div>
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fc9f?w=500&auto=format&fit=crop&q=60" alt="Cappuccino">
-                    <h3>Cappuccino Italiano</h3>
-                    <p class="descricao">Espresso, leite vaporizado e uma crema densa com toque de cacau.</p>
-                    <span class="preco">R$ 11,90</span>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&auto=format&fit=crop&q=80" alt="Pizza Calabresa">
+                    <div class="card-body">
+                        <h3>Calabresa Especial</h3>
+                        <p>Molho de tomate, muçarela, calabresa defumada fatiada de primeira qualidade e cebola roxa.</p>
+                        <span class="preco">R$ 46,90</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="especial" class="categoria-section">
-            <h2>Especial da Casa</h2>
-            <div class="produtos-grid">
-                <div class="produto-card destaque">
-                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60" alt="Café Premium">
-                    <h3>Doce Latte Supremo</h3>
-                    <p class="descricao">Nosso espresso especial blend da casa, leite condensado artesanal, chantilly e raspas de chocolate belga.</p>
-                    <span class="preco">R$ 18,50</span>
+        <section id="especiais" class="menu-section">
+            <h2 class="section-title">Pizzas Especiais</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&auto=format&fit=crop&q=80" alt="Pizza Quatro Queijos">
+                    <div class="card-body">
+                        <h3>Quatro Queijos Suprema</h3>
+                        <p>Combinação perfeitamente balanceada de muçarela, provolone, gorgonzola e o legítimo Catupiry.</p>
+                        <span class="preco">R$ 56,90</span>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop&q=80" alt="Pizza Parma com Rúcula">
+                    <div class="card-body">
+                        <h3>Parma e Rúcula</h3>
+                        <p>Molho rústico de tomate, muçarela, fatias de presunto cru tipo Parma, folhas de rúcula fresca e lascas de parmesão.</p>
+                        <span class="preco">R$ 62,90</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="bebidas" class="categoria-section">
-            <h2>Bebidas</h2>
-            <div class="produtos-grid">
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=60" alt="Soda Italiana">
-                    <h3>Soda Italiana de Maçã Verde</h3>
-                    <p class="descricao">Bebida refrescante frisante com xarope artesanal de maçã verde e gelo.</p>
-                    <span class="preco">R$ 12,00</span>
+        <section id="doces" class="menu-section">
+            <h2 class="section-title">Pizzas Doces</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1617343251257-b5d709934bf2?w=500&auto=format&fit=crop&q=80" alt="Pizza de Chocolate">
+                    <div class="card-body">
+                        <h3>Chocolate com Morango</h3>
+                        <p>Generosa camada de chocolate ao leite derretido, coberta com morangos frescos e granulado belga.</p>
+                        <span class="preco">R$ 49,90</span>
+                    </div>
                 </div>
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=60" alt="Chocolate Quente">
-                    <h3>Chocolate Quente Cremoso</h3>
-                    <p class="descricao">Chocolate europeu derretido com creme de leite, servido bem denso.</p>
-                    <span class="preco">R$ 14,00</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="doces" class="categoria-section">
-            <h2>Doces</h2>
-            <div class="produtos-grid">
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=60" alt="Bolo de Chocolate">
-                    <h3>Fatia de Bolo Trufado</h3>
-                    <p class="descricao">Bolo de chocolate belga com recheio de ganache meio amargo e cobertura cremosa.</p>
-                    <span class="preco">R$ 15,90</span>
-                </div>
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&auto=format&fit=crop&q=60" alt="Donut">
-                    <h3>Donut Glaciado</h3>
-                    <p class="descricao">Rosquinha super macia com cobertura clássica de açúcar e baunilha.</p>
-                    <span class="preco">R$ 9,50</span>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?w=500&auto=format&fit=crop&q=80" alt="Pizza Romeu e Julieta">
+                    <div class="card-body">
+                        <h3>Romeu e Julieta</h3>
+                        <p>A deliciosa união entre queijo minas padrão derretido e goiabada cascão cremosa.</p>
+                        <span class="preco">R$ 45,90</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="salgados" class="categoria-section">
-            <h2>Salgados</h2>
-            <div class="produtos-grid">
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop&q=60" alt="Croissant">
-                    <h3>Croissant de Queijo e Presunto</h3>
-                    <p class="descricao">Massa folhada francesa super crocante e amanteigada, recheada na hora.</p>
-                    <span class="preco">R$ 13,50</span>
+        <section id="bebidas" class="menu-section">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&auto=format&fit=crop&q=80" alt="Refrigerantes">
+                    <div class="card-body">
+                        <h3>Refrigerante Lata</h3>
+                        <p>Opções: Coca-Cola, Coca-Cola Zero, Guaraná Antarctica ou Sprite (350ml).</p>
+                        <span class="preco">R$ 6,50</span>
+                    </div>
                 </div>
-                <div class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=500&auto=format&fit=crop&q=60" alt="Pão de Queijo">
-                    <h3>Combo Pão de Queijo (3 un.)</h3>
-                    <p class="descricao">Pães de queijo mineiro legítimo, crocantes por fora e macios por dentro.</p>
-                    <span class="preco">R$ 8,00</span>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=500&auto=format&fit=crop&q=80" alt="Suco Natural">
+                    <div class="card-body">
+                        <h3>Suco Natural de Laranja</h3>
+                        <p>Suco 100% puro da fruta, feito na hora. Refrescante e saudável (Garrafa 500ml).</p>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bordas" class="menu-section">
+            <h2 class="section-title">Bordas Recheadas</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=500&auto=format&fit=crop&q=80" alt="Borda de Catupiry">
+                    <div class="card-body">
+                        <h3>Borda de Catupiry</h3>
+                        <p>Borda generosamente recheada com o autêntico requeijão cremoso Catupiry.</p>
+                        <span class="preco">R$ 8,00</span>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=80" alt="Borda de Cheddar">
+                    <div class="card-body">
+                        <h3>Borda de Cheddar Cream</h3>
+                        <p>Borda crocante recheada com um delicioso e cremoso queijo tipo cheddar.</p>
+                        <span class="preco">R$ 9,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="salgados" class="menu-section">
+            <h2 class="section-title">Salgados</h2>
+            <div class="grid-cardapio">
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1585435465945-bef5a9edfd20?w=500&auto=format&fit=crop&q=80" alt="Coxinha">
+                    <div class="card-body">
+                        <h3>Coxinha de Frango com Catupiry</h3>
+                        <p>Massa leve e crocante com recheio super temperado de frango desfiado e Catupiry.</p>
+                        <span class="preco">R$ 7,50</span>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500&auto=format&fit=crop&q=80" alt="Pastel frito">
+                    <div class="card-body">
+                        <h3>Pastel de Carne Gourmet</h3>
+                        <p>Pastel frito na hora, massa sequinha e recheio de carne moída bem temperada com ovos e azeitonas.</p>
+                        <span class="preco">R$ 8,00</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -115,20 +164,15 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="empresa-dados">
-                <h3>Doce Café CIA</h3>
-                <p>📞 Telefone: (81) 99999-9999</p>
-                <p>📍 O melhor café da cidade</p>
-            </div>
-            <div class="dev-dados">
-                <h3>Desenvolvido por</h3>
-                <p>⚡ Lucas Devs e CIA</p>
-                <p>📞 Contato: (83) 99607-9080</p>
+        <div class="footer-container">
+            <div class="footer-block">
+                <h3>Dados da Empresa</h3>
+                <p class="company-name">Ellen Eloize CIA</p>
+                <p class="phone-link">Telefone: 81 991011929</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Meu Doce Café. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Eloize Pizza´S. Todos os direitos reservados.</p>
         </div>
     </footer>
 
